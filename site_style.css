@@ -35,7 +35,9 @@ B1C3E7 (light blue)
 }
 
 
-
+a:hover {
+    cursor:pointer;
+}
 
 body {
     transition: background-color ease-in-out 1s;
