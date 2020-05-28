@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!--
+
+index.html
+
+Author: Michael Savini
+Created: 1/29/2020
+
+-->
+
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <head>
+        <!-- BOOTSTRAP & jQuery Link -->
+        <title>Michael J. Savini</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- STYLE Link -->
+        <link rel="stylesheet" href="site_style.css">
+    </head>
+    
+    <body id="bodyIDtag" style="overflow:hidden;">
+        <div id="nav-load-id"></div>
+        <!-- BODY goes HERE -->
+        <section class="hideClass intro_info" style="margin-left:4%;margin-right:4%;">
+            <img height="180px" src="static/headshot.JPG">
+            <h2>Michael J. Savini</h2>
+            <h3 style="padding-bottom:0.5rem"> Rensselaer Polytechnic Institute Class of 2020</h3>
+            <p style="padding-top:0.5rem;">
+            Software Developer &bull;
+            Full Stack Developer &bull;
+            Software Engineer &bull;
+            Web Designer <br>
+            Audio Engineer &bull;
+            Composer &bull;
+            Music Producer &bull;
+            Sound Designer &bull;
+            Mix Engineer <br>
+            
+            </p>
+        </section>
+        
+        <!--
+        <div id="kirbyEnv" class="kirbyWorld2">
+            <img style="left:60vw;border:none;box-shadow:none;"align="left" height="200px" src="static/kirby_tree.png">
+            <img style="z-index:0;
+                        bottom:28vh;
+                        -webkit-animation-name: cloudsmove2;
+                        -webkit-animation-duration: 100s;
+                        border:none;box-shadow:none;
+                        "align="left" height="200px" src="static/cloud%20gif.gif">
+            
+        </div>
+        <div id="kirbyZone" class="kirbyWalk2">
+            <img style="border:none;box-shadow:none;"align="left" height="70px" src="static/kirby-walk.gif">
+        </div>
+        -->
+        <div id="footer-load-id"></div>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+            $("#nav-load-id").load("nav.html");
+            $("#footer-load-id").load("footer.html");
+        });
+    
+    </script>
+</html>

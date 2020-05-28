@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+
+<nav id="nav-load-id" class="navbar navbar-dark navCustomStyle">
+    <!-- Navbar brand -->
+    <a class="navbar-brand mr-auto" id="homeLink">
+        <img width="40px"src="static/logo1.png" alt="Michael J. Savini">
+    </a>
+    <ul style="display:inline-block; list-style-type: none;" class=" mediaContainer navbar-nav" id="navbarSupportedContent2">
+            <li style="display:inline-block;" class="nav-item">
+                <a style="margin-right:20px;" class="nav-link" id="resumeLink">Resume</a>
+            </li>
+            <li style="display:inline-block;" class="nav-item">
+                <a style="" class="nav-link" id="contactLink">Contact</a>
+            </li>
+
+    </ul>
+    
+    <!-- Links -->
+    <!-- <button id ="hamburger" style="border:none;padding-bottom: 6px;"class="navbar-toggler third-button" type="button" data-target="#navbarSupportedContent1"
+    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon3"><span></span><span></span><span></span></div>
+    </button> -->
+    <!-- Collapsible content -->
+    <!--
+    <div class="mediaContainer2 collapseContent collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+            <!--
+            <li class=" nav-item">
+                <a class=" customNavItems nav-link" href="about.html">About</a>
+            </li>
+            
+            <li class=" nav-item">
+                <a class="customNavItems nav-link" href="resume.html">Resume</a>
+            </li>
+            <!--
+            <li class=" nav-item">
+                <a class=" customNavItems nav-link" href="projects.html">Portfolio</a>
+            </li>
+            
+            <li class=" nav-item">
+                <a class=" customNavItems nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+    -->
+  <!-- Collapsible content -->
+</nav>
+
+<script>
+    $(document).ready(function () {
+            var state = true;
+            var state2 = true;
+            $('.third-button').on('click', function () {
+                if( state2 ){
+                    $( ".collapseContent" ).delay( 600 ).animate({
+                        paddingTop: "toggle",
+                        paddingBottom:"toggle",
+                        opacity: "toggle",
+                        height: "toggle",
+                        }, 800, function() {});
+                    $('.animated-icon3').toggleClass('open');
+                } else {
+                    $( ".collapseContent" ).animate({
+                        paddingTop: "toggle",
+                        paddingBottom:"toggle",
+                        opacity: "toggle",
+                        height: "toggle",
+                        }, 800, function() {});
+                    $('.animated-icon3').toggleClass('open');
+                }
+                $('#kirbyZone').toggleClass('kirbyWalk');
+                $('#kirbyEnv').toggleClass('kirbyWorld');
+                if( state2 ){
+                    $('.hideClass').animate({ 
+                        opacity:"toggle"
+                        },600, function() {});
+                } else {
+                    $('.hideClass').delay( 800 ).animate({ 
+                        opacity:"toggle"
+                        },600, function() {});
+                }
+                if ( state ) {
+                    $( "#bodyIDtag" ).css("background-color","pink").animate({}, 
+                     600,function() {});
+                } else {
+                    $( "#bodyIDtag" ).css("background-color","lavender").animate({}, 600,function() {});
+                  }
+                state = !state;
+                state2 = !state2;
+            });
+            
+            $('#homeLink').on('click', function(){
+                window.location.href = "/";
+            });
+        
+            $('#resumeLink').on('click', function(){
+                window.location.href = "/resume";
+            });
+        
+            $('#contactLink').on('click', function(){
+                window.location.href = "/contact";
+            });
+            
+    });
+</script>

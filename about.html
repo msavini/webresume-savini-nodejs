@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!--
+
+about.html
+
+Author: Michael Savini
+Created: 2/4/2020
+
+-->
+
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <head>
+        <!-- BOOTSTRAP & jQuery Link -->
+        <title>About | MJS</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- STYLE Link -->
+        <link rel="stylesheet" href="site_style.css">
+        
+    </head>
+    
+    <body id="bodyIDtag" >
+        <div id="nav-load-id"></div>
+        <h1 style="padding:1%; font-size: 1.8rem; 
+                   margin-left:2%; margin-right:2%;
+                   text-align:center; 
+                   border-bottom:1px solid #202333">About</h1>
+        <div class="aboutContainer">
+            <div class="">
+                <h4>Early Life</h4>
+            </div>
+        
+            
+        
+        </div>
+        <div class="" id="footer-load-id"></div>
+    </body>
+    
+    
+    
+    <script>
+        $(document).ready(function(){
+            $("#nav-load-id").load("nav.html");
+            $("#footer-load-id").load("footer2.html");
+        });
+    </script>
+
+</html>
