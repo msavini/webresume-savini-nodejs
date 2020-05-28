@@ -37,6 +37,7 @@ B1C3E7 (light blue)
 
 a:hover {
     cursor:pointer;
+    color:white!important;
 }
 
 body {
@@ -260,8 +261,6 @@ END RESUME STUFF
 /*
 ABOUT PAGE STUFF -----------------------------------------
 */
-.aboutContainer
-
 
 /*
 
@@ -435,11 +434,13 @@ PAGE FOOTER STUFF -----------------------------------------
     display:inline-block;
     margin-left:2rem;
     margin-right:2rem;
+    opacity:0.5;
 }
 
 .customFooterItems:hover{
-    color:hotpink;
+    color:white;
     text-decoration: none;
+    opacity:1;
 }
 
 #footer3-load-id{
