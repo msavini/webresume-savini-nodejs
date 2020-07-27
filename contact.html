@@ -21,19 +21,19 @@ Created: 2/1/2020
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- STYLE Link -->
-        <link rel="stylesheet" href="site_style.css">
+        <link rel="stylesheet" href="/site_style.css">
         
     </head>
     
     <body id="bodyIDtag">
         <div id="nav-load-id"></div>
         
-        <div class="hideClass intro_info">
+        <div class="hideClass intro_info" style="color:white;">
             <h3>
                 Michael John Savini
             </h3>
-            <img style="margin-top:2vh;vertical-align:top;border-radius:1px;max-width:40%;max-height:240px" src="static/about3.jpg">
-            <p style="margin:auto;display:inline-block;text-align:left;padding-left:10vw;padding-top:2vh;padding-bottom:4rem;padding-left:2rem;padding-right:2rem;font-size:0.9rem;">
+            <img style="margin-top:2vh;vertical-align:top;border-radius:5px;max-width:40%;max-height:240px" src="/static/slideshow/headshot1.jpg">
+            <p style="margin:auto;display:inline-block;text-align:left;padding-left:10vw;padding-top:2vh;padding-bottom:4rem;padding-left:2rem;padding-right:2rem;font-size:1rem;">
                 
                 Email: michaeljsavini@gmail.com (preferred)<br>
                 Phone or Text: (845) 527-0947 (please leave a message)<br>
@@ -58,6 +58,9 @@ Created: 2/1/2020
             $("#nav-load-id").load("nav.html");
             $("#footer-load-id").load("footer.html");
         });
+        $('#contactLink').on('click', function(){
+                window.location.href = "/contact";
+            });
     </script>
 
 </html>

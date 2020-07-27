@@ -2,12 +2,15 @@
 
 COLOR PALETTE in HEX, ordered lightest to darkest:
 
-D4D8F6 (very light blue)
-B1C3E7 (light blue)
-617285 (off gray)
-2A3055 (dark blue/purple)
-202333 (off black)
-
+#D4D8F6 (very light blue)
+#B1C3E7 (light blue)
+#617285 (off gray)
+#373e6e (lighter dark purple)
+#2A3055 (dark blue/purple)
+#1b1f38 (darker blue/purple)
+#101221 (darkest purple)
+#202333 (2nd darkest purple)
+#0c0e1a (off black)
 */
 
 @media only screen and (max-width: 600px) {
@@ -17,8 +20,18 @@ B1C3E7 (light blue)
     .mediaContainer{
         display:none!important;
     }
-
+    .photoBanner{
+        width:100%;
+    }
+    .mobileView{
+        display:block!important;
+    }
+    .desktopView{
+        display:none!important;
+    }
+    
 }
+
 @media only screen and (min-width: 600px) {
     #hamburger{
         display:none!important;
@@ -30,7 +43,12 @@ B1C3E7 (light blue)
         text-align:right;
         vertical-align:middle;
     }
-    
+    .mobileView{
+        display:none!important;
+    }
+    .desktopView{
+        display:block!important;
+    }
 
 }
 
@@ -38,11 +56,14 @@ B1C3E7 (light blue)
 a:hover {
     cursor:pointer;
     color:white!important;
+    transition: color ease-in-out 0.3s;
 }
 
 body {
     transition: background-color ease-in-out 1s;
-    background-color:lavender;
+    /*background-color:lavender;*/
+    background-color:#101221;
+    color:white;
 }
 
 
@@ -281,7 +302,7 @@ NAVBAR -----------------------------------------
 */
 
 .navCustomStyle{
-    background-color:#202333;
+    background-color:#0c0e1a;
 }
 
 
@@ -405,7 +426,7 @@ PAGE FOOTER STUFF -----------------------------------------
 .pageFooter{
     font-size:0.8rem;
     color:white;
-    background-color:#202333;
+    background-color:#0c0e1a;
     position:fixed;
     left:0;
     bottom:0;
@@ -419,7 +440,7 @@ PAGE FOOTER STUFF -----------------------------------------
 .pageFooter2{
     font-size:0.8rem;
     color:white;
-    background-color:#202333;
+    background-color:#0c0e1a;
     left:0;
     bottom:0;
     width:100%;
@@ -435,6 +456,7 @@ PAGE FOOTER STUFF -----------------------------------------
     margin-left:2rem;
     margin-right:2rem;
     opacity:0.5;
+    transition: opacity ease-in-out 0.3s;
 }
 
 .customFooterItems:hover{
@@ -447,3 +469,315 @@ PAGE FOOTER STUFF -----------------------------------------
     opacity:0;
 }
 
+
+/* SLIDESHOW PAGE / WORD CLOUD DEVELOPMENT */
+
+.wordCloud{
+    min-width:100%;
+    margin:0;
+    text-align:center;
+}
+
+.wordChunk {
+    position: relative;
+    padding:1vw;
+    z-index: 1;
+    height:20vh;
+    text-align:left;
+    transition: padding-left ease-in-out 0.5s;
+    opacity: 0.8;
+}
+
+.wordChunkB {
+    position: relative;
+    padding:1vw;
+    z-index: 1;
+    height:20vh;
+    text-align:left;
+    transition: padding-right ease-in-out 0.5s;
+    opacity: 0.8;
+}
+
+.wordChunk .wordChunk1 {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(/static/backgrounds/about.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.1;
+    width: 100%;
+    height:20vh;
+    transition: opacity ease-in-out 0.5s;
+    
+}
+.wordChunkB .wordChunk2 {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(/static/backgrounds/tech2.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: .2;
+    width: 100%;
+    height:20vh;
+    transition: opacity ease-in-out 0.5s;
+    
+}
+
+.wordChunk .wordChunk3 {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(/static/backgrounds/music.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.1;
+    width: 100%;
+    height:20vh;
+    transition: opacity ease-in-out 0.5s;
+    
+}
+
+.wordChunk:hover > .wordChunk1{
+    opacity:0.5;
+    cursor:pointer;
+}
+
+.wordChunkB:hover > .wordChunk2{
+    opacity:0.5;
+    cursor:pointer;
+}
+
+.wordChunk:hover > .wordChunk3{
+    opacity:0.5;
+    cursor:pointer;
+}
+
+.wordChunk:hover, .wordChunkB:hover{
+    cursor:pointer;
+    padding-left:2vw;
+    padding-right:2vw;
+    opacity: 1.0;
+    
+}
+
+.wordChunk:hover > .hoverShadow{
+    box-shadow: 0 10px 15px 5px black;
+}
+
+.wordChunkB:hover > .hoverShadow{
+    box-shadow: 0 10px 15px 5px black;
+}
+
+
+.hoverShadow:hover{
+    box-shadow: 0 10px 15px 5px black;
+}
+
+.hoverShadow{
+    box-shadow: 0 0px 0px 0px #202333;
+    transition: box-shadow ease-in-out 0.5s;
+}
+
+
+.card{
+    z-index:1;
+    opacity:1;
+    border: 4px solid;
+    border-color:#373e6e;
+    margin:auto;
+    padding:20px;
+    padding-top: 40px;
+    padding-bottom:40px;
+    background-color:#2A3055;
+    color:white;
+    width:40%;
+    transition: border-color ease-in-out 0.3s;
+}
+.card p{
+    margin:auto;
+    padding:0;
+}
+
+.card > .wordChunk3 {
+    opacity:1;
+}
+
+.card:hover{
+    border-color:#B1C3E7;
+}
+
+.divider{
+    max-width:100px;
+}
+
+.table{
+    table-layout: fixed;
+}
+
+/* PHOTO STUFF */
+.bannerContain{
+    height:50vh;
+    overflow:hidden;
+}
+.photoBanner{
+    width:25%;
+    height:50vh;
+    position:relative;
+    margin:0;
+    overflow:hidden;
+    background-color:#101221;
+    display:inline-block;
+}
+
+.textBanner{
+    margin:0;
+    padding:5%;
+    width:100%;
+    height:50vh;
+    display:inline-block;
+    vertical-align: top;
+    background-color:#101221;
+    overflow-y: scroll;
+}
+
+.photoSlides{
+    opacity:0;
+    overflow:hidden;
+    animation:fade;
+    vertical-align:middle;
+    display:inline;
+}
+
+.photoSlides img{
+    height:auto;
+    width:100%;
+    
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease-in-out;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.capText {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numberText {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 6s;
+  animation-name: fade;
+  animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+    0% {left:0; opacity:0}
+    15% {left:100;opacity:1}
+    85% {left:100;opacity:1}
+    100% {left:200;opacity:0}
+}
+
+@keyframes fade {
+    0% {left:0; opacity:0}
+    15% {left:100;opacity:1}
+    85% {left:100;opacity:1}
+    100% {left:200;opacity:0}
+}
+
+.fade2 {
+  -webkit-animation-name: fade2;
+  -webkit-animation-duration: 4.5s;
+  animation-name: fade2;
+  animation-duration: 4.5s;
+}
+
+@-webkit-keyframes fade2 {
+    0% {left:0; opacity:0}
+    15% {left:100;opacity:1}
+    85% {left:100;opacity:1}
+    100% {left:200;opacity:0}
+}
+
+@keyframes fade2 {
+    0% {left:0; opacity:0}
+    15% {left:100;opacity:1}
+    85% {left:100;opacity:1}
+    100% {left:200;opacity:0}
+}
+
+
+.bioSection{
+    padding:1%; 
+    margin-left:2%; 
+    margin-right:2%; 
+    border-bottom:1px solid #202333
+}
+
+.lefty{
+    text-align:left;
+}
+
+.righty{
+    text-align:right;
+}

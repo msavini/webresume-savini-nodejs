@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 
 
-<nav id="nav-load-id" class="navbar navbar-dark navCustomStyle">
+<nav id="nav-load-id" class="navbar navbar-dark navCustomStyle" style="border-bottom:1px solid #202333">
     <!-- Navbar brand -->
     <a class="navbar-brand mr-auto" id="homeLink">
-        <img width="40px"src="static/logo1.png" alt="Michael J. Savini">
+        <img width="40px"src="/static/logo1.png" alt="Michael J. Savini">
     </a>
     <ul style="display:inline-block; list-style-type: none;" class=" mediaContainer navbar-nav" id="navbarSupportedContent2">
+        
+            <li style="display:inline-block;" class="nav-item">
+                <a style="margin-right:20px;" class="nav-link" id="homeLink3">Home</a>
+            </li>
+            <li style="display:inline-block;" class="nav-item">
+                <a style="margin-right:20px;" class="nav-link" id="aboutLink">About</a>
+            </li>
             <li style="display:inline-block;" class="nav-item">
                 <a style="margin-right:20px;" class="nav-link" id="resumeLink">Resume</a>
+            </li>
+            <li style="display:inline-block;" class="nav-item">
+                <a style="margin-right:20px;" class="nav-link" id="portfolioLink">Portfolio</a>
             </li>
             <li style="display:inline-block;" class="nav-item">
                 <a style="" class="nav-link" id="contactLink">Contact</a>
@@ -25,21 +35,24 @@
     
     <div class="mediaContainer2 collapseContent collapse navbar-collapse" id="navbarSupportedContent1">
         <ul class="navbar-nav mr-auto">
-            <!--
+            
             <li class=" nav-item">
-                <a class=" customNavItems nav-link" href="about.html">About</a>
+                <a class=" customNavItems nav-link" id="homeLink2">Home</a>
             </li>
-            -->
             <li class=" nav-item">
-                <a class="customNavItems nav-link" href="resume.html">Resume</a>
+                <a class=" customNavItems nav-link" id="aboutLink2">About</a>
             </li>
-            <!--
+            
             <li class=" nav-item">
-                <a class=" customNavItems nav-link" href="projects.html">Portfolio</a>
+                <a class="customNavItems nav-link" id="resumeLink2">Resume</a>
             </li>
-            -->
+            
             <li class=" nav-item">
-                <a class=" customNavItems nav-link" href="contact.html">Contact</a>
+                <a class=" customNavItems nav-link" id="portfolioLink2">Portfolio</a>
+            </li>
+            
+            <li class=" nav-item">
+                <a class="customNavItems nav-link" id="contactLink2">Contact</a>
             </li>
             
         </ul>
@@ -70,8 +83,6 @@
                         }, 800, function() {});
                     $('.animated-icon3').toggleClass('open');
                 }
-                $('#kirbyZone').toggleClass('kirbyWalk');
-                $('#kirbyEnv').toggleClass('kirbyWorld');
                 if( state2 ){
                     $('.hideClass').animate({ 
                         opacity:"toggle"
@@ -85,21 +96,42 @@
                     $( "#bodyIDtag" ).css("background-color","pink").animate({}, 
                      600,function() {});
                 } else {
-                    $( "#bodyIDtag" ).css("background-color","lavender").animate({}, 600,function() {});
+                    $( "#bodyIDtag" ).css("background-color","#101221").animate({}, 600,function() {});
                   }
                 state = !state;
                 state2 = !state2;
             });
-            
             $('#homeLink').on('click', function(){
                 window.location.href = "/";
             });
-        
+            $('#homeLink3').on('click', function(){
+                window.location.href = "/";
+            });
+            $('#homeLink2').on('click', function(){
+                window.location.href = "/";
+            });
+            $('#aboutLink').on('click', function(){
+                window.location.href = "/about";
+            });
+            $('#aboutLink2').on('click', function(){
+                window.location.href = "/about";
+            });
+            $('#portfolioLink').on('click', function(){
+                window.location.href = "/portfolio";
+            });
+            $('#portfolioLink2').on('click', function(){
+                window.location.href = "/portfolio";
+            });
             $('#resumeLink').on('click', function(){
                 window.location.href = "/resume";
             });
-        
+            $('#resumeLink2').on('click', function(){
+                window.location.href = "/resume";
+            });
             $('#contactLink').on('click', function(){
+                window.location.href = "/contact";
+            });
+            $('#contactLink2').on('click', function(){
                 window.location.href = "/contact";
             });
             

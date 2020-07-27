@@ -15,11 +15,33 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(Express.static('./'));
+app.use('/', Express.static(__dirname + '/'));
 var db;
 
 
 app.get('/', (req, res) => {
+    console.log("Redirected: home ");
     res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/about', (req, res) => {
+    console.log("Redirected: about ");
+    res.sendFile(__dirname + "/about.html");
+});
+
+app.get('/portfolio', (req, res) => {
+    console.log("Redirected: portfolio ");
+    res.sendFile(__dirname + "/portfolio.html");
+});
+
+app.get('/portfolio/tech', (req, res) => {
+    console.log("Redirected: tech ");
+    res.sendFile(__dirname + "/tech.html");
+});
+
+app.get('/portfolio/music', (req, res) => {
+    console.log("Redirected: music ");
+    res.sendFile(__dirname + "/music.html");
 });
 
 app.get('/resume', (req, res) => {
@@ -32,6 +54,14 @@ app.get('/contact', (req, res) => {
     console.log("Redirected: contact ");
     res.sendFile(__dirname + "/contact.html");
 });
+
+/*For Use Debugging the Slideshow Page*/
+
+app.get('/slideshow', (req, res) => {
+    console.log("Redirected: slideshow ");
+    res.sendFile(__dirname + "/slideshow.html");
+});
+
 
 var port = process.env.PORT || 3000;
 

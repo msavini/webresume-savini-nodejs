@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<!--
+
+slideshow.html
+
+Author: Michael Savini
+Created: 1/29/2020
+
+-->
+
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <head>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- STYLE Link -->
+        <link rel="stylesheet" href="site_style.css">
+    </head>
+    
+    <body id="bodyIDtag" style="">
+        <div id="nav-load-id"></div>
+        <div class="desktopView">
+                <!-- BODY goes HERE -->
+                <div class="d-flex">
+                    <div class="bannerContain">
+                        <div class="photoBanner">
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_0.jpg" style=" vertical-align:top; width:100%">
+                            </div>
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_1.jpg" style="margin-top:-30%;width:100%">
+                            </div>
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_8.jpg" style="margin-top:-10%;width:100%">
+                            </div>
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_9.jpg" style="margin-top:-30%;width:100%">
+                            </div>
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_2.jpg" style="margin-top:-20%; width:100%">
+                            </div>
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_5.jpg" style="margin-top:-15%;width:5=100%">
+                            </div>
+                        </div>
+                        <div id="counterIntuitiveContainer" style="width:50%;">
+                            <div class="flex-start flex-column flex-grow-1 align-self-stretch">
+                                <div class ="textBanner">
+                                    <h2> Hi! I'm Mike.</h2>
+                                    <br>
+                                    <p style="font-weight:300;">
+                                    
+                                    <br><br>
+                                    &nbsp; &nbsp; &nbsp;After my graduation from <b>Rensselaer Polytechnic Institute</b> in May of 2020, I decided to create this website to host some documentation for my projects in various industries, as well as my full resume and contact information.
+                                    <br><br>
+                                    &nbsp; &nbsp; &nbsp;This site is actively in development between projects; its source code, along with code for some of my other projects, can be found in my Github Repository <b>"webresume-savini-nodejs."</b> 
+                                    <br><br>
+                                    
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wordCloud">
+                        <div class="wordChunk" style="cursor:pointer;">
+                            <div class="wordChunk1"></div>
+                            <h3 style=" font-size:3rem; font-weight:600;">About Me</h3>
+                        </div>
+                        <div class="wordChunkB"style="cursor:pointer;text-align:right;">
+                            <div class="wordChunk2"></div>
+                            <h3 style="font-size:3rem; font-weight:600;">Technology &amp; Software Development</h3>
+                            <div class="wordChunk2"></div>
+                        </div>
+                        <div class="wordChunk" style="cursor:pointer;">
+                            <div class="wordChunk3"></div>
+                            <h3 style="font-size:3rem; font-weight:600;">Music &amp; Creative Endeavors</h3>
+                            <div class="wordChunk3"></div>
+                        </div>
+                </div>
+                <!-- BODY ends HERE -->
+                <div id="footer2-load-id"></div>
+        </div>
+        <div class="mobileView">
+            <section class="hideClass intro_info " style="color:white;margin-left:4%;margin-right:4%;">
+                <img height="180px" src="static/headshot.JPG">
+                <h2>Michael J. Savini</h2>
+                <h3 style="padding-bottom:0.5rem"> Rensselaer Polytechnic Institute Class of 2020</h3>
+                <br>
+                <p style="font-weight:600;padding:0.5rem;border-radius:5px;border: 1px solid white; ">About Me</p>
+                <p style="font-weight:600;padding:0.5rem;border-radius:5px;border: 1px solid white; ">Technology &amp; Software Development</p>
+                <p style="font-weight:600;padding:0.5rem;border-radius:5px;border: 1px solid white; ">Music &amp; Creative Endeavors</p>
+            </section>
+            <div id="footer-load-id"></div>
+
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+            $("#nav-load-id").load("nav.html");
+            $("#footer2-load-id").load("footer2.html");
+            $("#footer-load-id").load("footer.html");
+        });
+        var slideIndex = 0;
+        showSlides(slideIndex);
+        
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("photoSlides");
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 8000);
+        // Change image every 2 seconds
+        }
+        
+    </script>
+</html>

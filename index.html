@@ -6,7 +6,7 @@ index.html
 
 Author: Michael Savini
 Created: 1/29/2020
-
+Updated: 7/20/2020
 -->
 
 <html lang="en">
@@ -15,58 +15,128 @@ Created: 1/29/2020
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <head>
-        <!-- BOOTSTRAP & jQuery Link  -->
-        <title>Michael J. Savini</title>
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- STYLE Link -->
         <link rel="stylesheet" href="site_style.css">
     </head>
     
-    <body id="bodyIDtag" style="overflow:hidden;">
+    <body id="bodyIDtag" style="">
         <div id="nav-load-id"></div>
-        <!-- BODY goes HERE -->
-        <section class="hideClass intro_info" style="margin-left:4%;margin-right:4%;">
-            <img height="180px" src="static/headshot.JPG">
-            <h2>Michael J. Savini</h2>
-            <h3 style="padding-bottom:0.5rem"> Rensselaer Polytechnic Institute Class of 2020</h3>
-            <p style="padding-top:0.5rem;">
-            Software Developer &bull;
-            Full Stack Developer &bull;
-            Software Engineer &bull;
-            Web Designer <br>
-            Audio Engineer &bull;
-            Composer &bull;
-            Music Producer &bull;
-            Sound Designer &bull;
-            Mix Engineer <br>
-            
-            </p>
-        </section>
-        
-        <!--
-        <div id="kirbyEnv" class="kirbyWorld2">
-            <img style="left:60vw;border:none;box-shadow:none;"align="left" height="200px" src="static/kirby_tree.png">
-            <img style="z-index:0;
-                        bottom:28vh;
-                        -webkit-animation-name: cloudsmove2;
-                        -webkit-animation-duration: 100s;
-                        border:none;box-shadow:none;
-                        "align="left" height="200px" src="static/cloud%20gif.gif">
-            
+        <div class="desktopView">
+                <!-- BODY goes HERE -->
+                <div class="bannerContain">
+                    <div class="d-flex">
+                        <div class="photoBanner">
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_0.jpg" style=" vertical-align:top; height:100%">
+                            </div>
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_1.jpg" style="height:100%">
+                            </div>
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_8.jpg" style="height:100%">
+                            </div>
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_9.jpg" style="height:100%">
+                            </div>
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_2.jpg" style="height:100%">
+                            </div>
+                            <div class="photoSlides fade">
+                                <img src="/static/slideshow/photo_5.jpg" style="height:100%">
+                            </div>
+                        </div>
+                        <div id="counterIntuitiveContainer" style="width:75%;">
+                            <div class="flex-start flex-column flex-grow-1 align-self-stretch">
+                                <div class ="textBanner" style="padding-bottom:0;background-image: linear-gradient(to top, rgba(255,0,0,0), #1b1f38);">
+                                    <h2> Hi! I'm Mike.</h2>
+                                        <p style="font-weight:300;">
+                                        <br>
+                                        &nbsp; &nbsp; &nbsp;Welcome to my website! After my graduation from <b>Rensselaer Polytechnic Institute</b> in May of 2020, I decided to create this website to host some documentation for my projects in various industries, as well as my full resume and contact information.
+                                        <br><br>
+                                        &nbsp; &nbsp; &nbsp;This site is actively in development between projects; its source code, along with code for some of my other projects, can be found in my Github Repository <b><a style="text-decoration: none;" href="https://github.com/msavini/webresume-savini-nodejs">"webresume-savini-nodejs."</a></b> 
+                                        <br><br>
+                                        Check out the sections below for more information and some examples of my work!
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wordCloud">
+                        <div class="wordChunk" style="padding-top:10vh;" id="aboutLink">
+                            <div class="wordChunk1"id="aboutLink"></div>
+                            <h3 id="aboutLink" style=" font-size:3rem; font-weight:600;">About Me</h3>
+                        </div>
+                        <div class="wordChunkB" id="techLink" style="padding-top:10vh;text-align:right;">
+                            <div class="wordChunk2" id="techLink"></div>
+                            <h3 id="techLink" style="font-size:3rem; font-weight:600;">Technology &amp; Software Development</h3>
+                        </div>
+                        <div class="wordChunk" style="padding-top:10vh;" id="musicLink">
+                            <div class="wordChunk3" id="musicLink"></div>
+                            <h3 id="musicLink" style="font-size:3rem; font-weight:600;">Music &amp; Creative Endeavors</h3>
+                        </div>
+                </div>
+                <!-- BODY ends HERE -->
+                <div id="footer2-load-id"></div>
         </div>
-        <div id="kirbyZone" class="kirbyWalk2">
-            <img style="border:none;box-shadow:none;"align="left" height="70px" src="static/kirby-walk.gif">
+        <div class="mobileView">
+            <section class="hideClass intro_info " style="color:white;margin-left:4%;margin-right:4%;">
+                <img height="180px" src="static/headshot.JPG">
+                <h2>Michael J. Savini</h2>
+                <h3 style="padding-bottom:0.5rem"> Rensselaer Polytechnic Institute Class of 2020</h3>
+                <br>
+                <p style="font-weight:600;padding:0.5rem;border-radius:5px;border: 1px solid white; " id="aboutLink2">About Me</p>
+                <p style="font-weight:600;padding:0.5rem;border-radius:5px;border: 1px solid white; " id="techLink2">Technology &amp; Software Development</p>
+                <p style="font-weight:600;padding:0.5rem;border-radius:5px;border: 1px solid white; " id="musicLink2">Music &amp; Creative Endeavors</p>
+                <br><br><br>
+            </section>
+            <div id="footer-load-id"></div>
+
         </div>
-        -->
-        <div id="footer-load-id"></div>
     </body>
 
     <script>
         $(document).ready(function(){
             $("#nav-load-id").load("nav.html");
+            $("#footer2-load-id").load("footer2.html");
             $("#footer-load-id").load("footer.html");
         });
-    
+        var slideIndex = 0;
+        showSlides(slideIndex);
+        
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("photoSlides");
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 6000);
+        // Change image every 2 seconds
+        }
+        
+        $('#aboutLink').on('click', function(){
+                window.location.href = "/about";
+        });
+        $('#techLink').on('click', function(){
+                window.location.href = "/portfolio/tech";
+        });
+        $('#musicLink').on('click', function(){
+                window.location.href = "/portfolio/music";
+        });
+        $('#aboutLink2').on('click', function(){
+                window.location.href = "/about";
+        });
+        $('#techLink2').on('click', function(){
+                window.location.href = "/portfolio/tech";
+        });
+        $('#musicLink2').on('click', function(){
+                window.location.href = "/portfolio/music";
+        });
+        
     </script>
 </html>
