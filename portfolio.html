@@ -28,29 +28,47 @@ Created: 2/4/2020
     
     <body id="bodyIDtag">
         <div id="nav-load-id"></div>
-        <h1 style="padding:1%; font-size: 2rem; 
-                   text-align:center; 
-                   border-bottom:1px solid #202333;
-                   background-image: linear-gradient(to top, rgba(255,0,0,0), #1b1f38);">Select A Field</h1>
-        <div class="aboutContainer" style="margin-top:2%;">
-            <div class="lefty" style="padding:2%;vertical-align:top; display:inline-block;margin-left:25%;max-width:25%;">
-                <div class="bigButton">
-                    <div class="wordChunk" style="padding-top:1vh;" id="musicLink">
-                        <div class="wordChunk3 hoverShadow" style="border-radius:5px;height:24vh;border:1px solid #202333;" id="musicLink"></div>
-                        <h3 id="musicLink" style="font-size:2.5rem; font-weight:600;">Music &amp; Creative Endeavors</h3>
+        <div class="desktopView">
+            <h1 style="padding:1%; font-size: 2rem; 
+                       text-align:center; 
+                       border-bottom:1px solid #202333;
+                       background-image: linear-gradient(to top, rgba(255,0,0,0), #1b1f38);">Select A Field</h1>
+            <div class="aboutContainer" style="margin-top:2%;">
+                <div class="lefty" style="padding:2%;vertical-align:top; display:inline-block;margin-left:25%;max-width:25%;">
+                    <div class="bigButton">
+                        <div class="wordChunk" style="padding-top:1vh;" id="musicLink">
+                            <div class="wordChunk3 hoverShadow" style="border-radius:5px;height:24vh;border:1px solid #202333;" id="musicLink"></div>
+                            <h3 id="musicLink" style="font-size:2.5rem; font-weight:600;">Music &amp; Creative Endeavors</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="righty" style="padding:2%;vertical-align:top; display:inline-block;max-width:25%;">
-                <div class="bigButton">
-                    <div class="wordChunkB" id="techLink" style="text-align:right;padding-top:1vh;">
-                            <div class="wordChunk2 hoverShadow" style="border-radius:5px;height:24vh;border:1px solid #202333;" id="techLink"></div>
-                            <h3 id="techLink" style="font-size:2.5rem; font-weight:600;">Technology &amp; Software Development</h3>
+                <div class="righty" style="padding:2%;vertical-align:top; display:inline-block;max-width:25%;">
+                    <div class="bigButton">
+                        <div class="wordChunkB" id="techLink" style="text-align:right;padding-top:1vh;">
+                                <div class="wordChunk2 hoverShadow" style="border-radius:5px;height:24vh;border:1px solid #202333;" id="techLink"></div>
+                                <h3 id="techLink" style="font-size:2.5rem; font-weight:600;">Technology &amp; Software Development</h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="" id="footer-load-id"></div>
+        <div class="mobileView">
+            <section class="hideClass" style="color:white;">
+                <h2 style="padding:1%; font-size: 2rem; 
+                       text-align:center; 
+                       border-bottom:1px solid #202333;
+                       background-image: linear-gradient(to top, rgba(255,0,0,0), #1b1f38);">Select A Field</h2>
+                <br>
+                <br>
+                <div style="margin-right:4%;margin-left:4%;text-align:center;">
+                    <p style="font-weight:600;padding:0.5rem;border-radius:5px;border: 1px solid white; " id="techLink2">Technology &amp; Software Development</p>
+                    <p style="font-weight:600;padding:0.5rem;border-radius:5px;border: 1px solid white; " id="musicLink2">Music &amp; Creative Endeavors</p>
+                </div>
+                <br><br><br>
+            </section>
+
+        </div>
+        <div id="footer-load-id"></div>
     </body>
     
     
@@ -59,11 +77,18 @@ Created: 2/4/2020
         $(document).ready(function(){
             $("#nav-load-id").load("nav.html");
             $("#footer-load-id").load("footer.html");
+            $("#footer-load-id2").load("footer2.html");
         });
         $('#techLink').on('click', function(){
                 window.location.href = "/portfolio/tech";
             });
         $('#musicLink').on('click', function(){
+                window.location.href = "/portfolio/music";
+            });
+        $('#techLink2').on('click', function(){
+                window.location.href = "/portfolio/tech";
+            });
+        $('#musicLink2').on('click', function(){
                 window.location.href = "/portfolio/music";
             });
     </script>
