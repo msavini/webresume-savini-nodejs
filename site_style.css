@@ -644,13 +644,12 @@ PAGE FOOTER STUFF -----------------------------------------
 
 .textBanner{
     margin:0;
-    padding:5%;
+    padding:4%;
     width:100%;
     height:50vh;
     display:inline-block;
     vertical-align: top;
     background-color:#101221;
-    overflow-y: scroll;
 }
 
 .photoSlides{
